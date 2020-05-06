@@ -48,10 +48,7 @@ class _CalculatorState extends State<Calculator> {
         child: FlatButton(
           onPressed: () {
             setState(() {
-
-
               toshow=d.validating(value);
-                //toshow=toshow+value;
             });
             print('$value');
           },
