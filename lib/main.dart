@@ -1,3 +1,4 @@
+import 'package:calculator/DataPicker.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -26,8 +27,8 @@ class Calculator extends StatefulWidget {
 }
 
 class _CalculatorState extends State<Calculator> {
-
   String toshow='';
+  DataPicker d=new DataPicker();
   Expanded row(String value1, String value2, String value3, String value4) {
     return Expanded(
       child: Row(
@@ -47,10 +48,10 @@ class _CalculatorState extends State<Calculator> {
         child: FlatButton(
           onPressed: () {
             setState(() {
-              if(value=='C')
-                toshow='';
-              else
-                toshow=toshow+value;
+
+
+              toshow=d.validating(value);
+                //toshow=toshow+value;
             });
             print('$value');
           },
